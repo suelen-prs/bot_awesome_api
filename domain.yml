@@ -55,8 +55,8 @@ responses:
           entity: usuario
 
   actions:
-    - utter_pergunta_nome
-    - utter_pergunta_moeda
+    - nome_form
+    - moeda_form
 
   forms:
     req_form:

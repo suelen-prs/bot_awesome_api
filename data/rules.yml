@@ -2,12 +2,29 @@ version: "3.1"
 
 rules:
 
-- rule: Say goodbye anytime the user says goodbye
+- rule: Se despedir sempre que o usuario se despedir
   steps:
   - intent: goodbye
   - action: utter_goodbye
 
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: Diga 'eu sou um bot' toda vez que alguem perguntar
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: ativando formulario #Active form
+  steps:
+  - intent: moeda
+  - action: moeda_form
+  - active_loop: moeda_form
+
+- rule: submetendo formulario #Submit form
+  condition:
+  - active_loop: moeda_form
+  steps:
+  - action: moeda_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  -action: moeda_form
+   
