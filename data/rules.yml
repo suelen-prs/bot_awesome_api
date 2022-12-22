@@ -26,5 +26,5 @@ rules:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
-  -action: moeda_form
+  - action: moeda_form
    

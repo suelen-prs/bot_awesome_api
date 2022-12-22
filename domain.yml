@@ -37,32 +37,34 @@ responses:
   utter_pergunta_moeda:
   - text: "Qual moeda gostaria de comparar?"
 
-  entities:
-    - usuario
-    - moeda_dois
+entities:
+  - usuario
+  - moeda_dois
 
-  slots:
-    usuario:
-      type: text
-      mappings:
-        - type: from_entity
-          entity: moeda_dois
+slots:
+  usuario:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: moeda_dois
     
-    moeda:
-      type: text
-      mappings:
-        - type: from_entity
-          entity: usuario
+  moeda:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: usuario
 
-  actions:
-    - nome_form
-    - moeda_form
+actions:
+  - utter_pergunta_nome
+  - utter_pergunta_moeda
+  - nome_form
+  - moeda_form
 
-  forms:
-    req_form:
-      required_slots:
-        - usuario
-        - moeda_dois
+forms:
+  moeda_form:
+    required_slots:
+      - usuario
+      - moeda_dois
 
 session_config:
   session_expiration_time: 800
