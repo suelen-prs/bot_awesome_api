@@ -39,14 +39,14 @@ responses:
 
   entities:
     - usuario
-    - moeda
+    - moeda_dois
 
   slots:
     usuario:
       type: text
       mappings:
         - type: from_entity
-          entity: moeda
+          entity: moeda_dois
     
     moeda:
       type: text
@@ -62,7 +62,7 @@ responses:
     req_form:
       required_slots:
         - usuario
-        - moeda
+        - moeda_dois
 
 session_config:
   session_expiration_time: 800

@@ -14,7 +14,7 @@ rules:
 
 - rule: ativando formulario #Active form
   steps:
-  - intent: moeda
+  - intent: moeda_dois
   - action: moeda_form
   - active_loop: moeda_form
 
