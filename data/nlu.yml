@@ -65,3 +65,21 @@ nlu:
     - você é humano?
     - eu estou falando com um bot?
     - eu estou falando com humano?
+
+- intent: usuario_nome
+  examples: |
+    - O meu nome é [Suelen][usuario]
+    - meu nome é [Andre](usuario)
+    - [Natacha](usuario)
+    - me chamo [bruno](usuario)
+    - sou [Maria](usuario)
+
+- intent: moeda_dois
+  examples: |
+    - [USD](moeda)
+    - [EUR](moeda)
+    - [BRLT](moeda)
+    - [COP](moeda)
+    - [ARS](moeda)
+    - [AUD](moeda)
+    - [BTC](moeda)
